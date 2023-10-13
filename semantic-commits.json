@@ -11,11 +11,13 @@
       },
       {
         "matchUpdateTypes": ["minor"],
-        "semanticCommitType": "feat"
+        "semanticCommitType": "feat",
+        "commitMessagePrefix": "{{semanticCommitType}}({{semanticCommitScope}}):"
       },
       {
         "matchUpdateTypes": ["patch"],
-        "semanticCommitType": "fix"
+        "semanticCommitType": "fix",
+        "commitMessagePrefix": "{{semanticCommitType}}({{semanticCommitScope}}):"
       },
       {
         "matchDatasources": ["docker"],
