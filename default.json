@@ -7,10 +7,11 @@
       "docker:enableMajor",
       ":automergeDigest",
       ":enablePreCommit",
-      "github>kalenarndt/renovate-config:commit-message",
+      "github>kalenarndt/renovate-config:automerge-github-actions",
       "github>kalenarndt/renovate-config:pr-labels",
       "github>kalenarndt/renovate-config:semantic-commits",
-      "github>kalenarndt/renovate-config:generic-regex-manager.json5"
+      "github>kalenarndt/renovate-config:generic-regex-manager.json5",
+      "github>kalenarndt/renovate-config:commit-message"
     ],
     "onboarding": false,
     "requireConfig": "optional",
