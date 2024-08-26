@@ -7,6 +7,7 @@
       "docker:enableMajor",
       ":automergeDigest",
       ":enablePreCommit",
+      ":semanticCommits",
       "github>kalenarndt/renovate-config:automerge-github-actions",
       "github>kalenarndt/renovate-config:pr-labels",
       "github>kalenarndt/renovate-config:semantic-commits",
