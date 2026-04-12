@@ -1,24 +1,23 @@
 {
-    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "extends": [
-      "config:recommended",
-      ":dependencyDashboard",
-      ":disableRateLimiting",
-      "docker:enableMajor",
-      ":automergeDigest",
-      ":enablePreCommit",
-      ":semanticCommits",
-      "github>kalenarndt/renovate-config:automerge-github-actions",
-      "github>kalenarndt/renovate-config:pr-labels",
-      "github>kalenarndt/renovate-config:semantic-commits",
-      "github>kalenarndt/renovate-config:generic-regex-manager.json5",
-      "github>kalenarndt/renovate-config:commit-message"
-    ],
-    "onboarding": false,
-    "requireConfig": "optional",
-    "timezone": "America/Denver",
-    "dependencyDashboardTitle": "🤖 Renovate Dashboard 🤖",
-    "suppressNotifications": ["prIgnoreNotification"],
-    "commitBodyTable": true,
-    "rebaseWhen": "conflicted"
-  }
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "docker:enableMajor",
+    "helpers:pinGitHubActionDigests",
+    "github>kalenarndt/renovate-config:custom-managers.json5",
+    "github>kalenarndt/renovate-config:commit-message",
+    "github>kalenarndt/renovate-config:pr-labels",
+    ":dependencyDashboard",
+    ":disableRateLimiting",
+    ":enablePreCommit"
+  ],
+  "timezone": "America/Denver",
+  "dependencyDashboardTitle": "Renovate Dashboard",
+  "suppressNotifications": [
+    "prEditedNotification",
+    "prIgnoreNotification"
+  ],
+  "commitBodyTable": true,
+  "rebaseWhen": "auto",
+  "platformCommit": "enabled"
+}
